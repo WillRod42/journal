@@ -15,6 +15,13 @@ Entry.prototype.numVowels = function() {
   return countCharacters("aeiouy", [this.title, this.body]);
 };
 
+Entry.prototype.getTeaser = function() {
+  let teaser = this.body.match(/\(?[^\.\?\!]+[\.\!\?]\)?/g);
+  teaser = teaser[0].split(" ");
+  teaser = teaser.slice(0, Math.min(8, teaser.length));
+  return teaser.join(" ") + "...";
+};
+
 function countCharacters(characters, texts) {
   let count = 0;
   texts.forEach(function(text) {

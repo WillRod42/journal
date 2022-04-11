@@ -20,13 +20,13 @@ Describe: numConsonants()
 
 Test: "It should return the number of consonants of the journal entry it is run on"
 Code: 
-const entry = Entry("Ttl", "Bd");
+const entry = new Entry("Ttl", "Bd");
 entry.numConsonants();
 Expected-output: 5
 
 Test: "It should return the number of consonants of the journal entry it is run on, excluding vowels"
 Code: 
-const entry = Entry("Title", "Body");
+const entry = new Entry("Title", "Body");
 entry.numConsonants();
 Expected-output: 5
 
@@ -42,6 +42,16 @@ Expected-output: 5
 
 Test: "It should return the number of vowels of the journal entry it is run on, excluding consonants"
 Code: 
-const entry = Entry("Title", "Body");
+const entry = new Entry("Title", "Body");
 entry.numConsonants();
 Expected-output: 5
+
+
+
+Describe: getTeaser()
+
+Test: "It should return the first eight words of the body of an entry"
+Code:
+const entry = new Entry("Title", "Body");
+entry.getTeaser();
+Expected-output: "Body..."
