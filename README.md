@@ -29,3 +29,19 @@ Code:
 const entry = Entry("Title", "Body");
 entry.numConsonants();
 Expected-output: 5
+
+
+
+Describe: numVowels()
+
+Test: "It should return the number of vowels of the journal entry it is run on"
+Code: 
+const entry = Entry("ie", "oy");
+entry.numConsonants();
+Expected-output: 5
+
+Test: "It should return the number of vowels of the journal entry it is run on, excluding consonants"
+Code: 
+const entry = Entry("Title", "Body");
+entry.numConsonants();
+Expected-output: 5
