@@ -9,12 +9,12 @@ Entry.prototype.numWords = function() {
 
 Entry.prototype.numConsonants = function() {
   let count = 0;
-  this.title.split("").forEach(function(character) {
+  this.title.toLowerCase().split("").forEach(function(character) {
     if ("qwrtpsdfghjklzxcvbnm".includes(character)) {
       count++;
     }
   });
-  this.body.split("").forEach(function(character) {
+  this.body.toLowerCase().split("").forEach(function(character) {
     if ("qwrtpsdfghjklzxcvbnm".includes(character)) {
       count++;
     }

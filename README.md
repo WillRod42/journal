@@ -23,3 +23,9 @@ Code:
 const entry = Entry("Ttl", "Bd");
 entry.numConsonants();
 Expected-output: 5
+
+Test: "It should return the number of consonants of the journal entry it is run on, excluding vowels"
+Code: 
+const entry = Entry("Title", "Body");
+entry.numConsonants();
+Expected-output: 5
